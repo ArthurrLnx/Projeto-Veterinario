@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinária</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Clínica Veterinária</h1>
+            <nav>
+                <ul>
+                    <li><a href="#cadastro-animal">Cadastrar Animal</a></li>
+                    <li><a href="#cadastro-cliente">Cadastrar Cliente</a></li>
+                    <li><a href="#cadastro-medico">Cadastrar Médico</a></li>
+                    <li><a href="#cadastro-funcionario">Cadastrar Funcionário</a></li>
+                    <li><a href="#agendamento">Agendar Consulta</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Formulário de Cadastro de Animal -->
+            <section id="cadastro-animal" class="form-section">
+                <h2>Cadastro de Animal</h2>
+                <form id="animal-form">
+                    <div class="form-group">
+                        <label for="animal-nome">Nome do animal:</label>
+                        <input type="text" id="animal-nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="animal-sexo">Sexo:</label>
+                        <select id="animal-sexo" required>
+                            <option value="M">Macho</option>
+                            <option value="F">Fêmea</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="animal-peso">Peso (kg):</label>
+                        <input type="number" id="animal-peso" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="animal-especie">Espécie:</label>
+                        <input type="text" id="animal-especie" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="animal-raca">Raça:</label>
+                        <input type="text" id="animal-raca" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="animal-data-nascimento">Data de Nascimento:</label>
+                        <input type="date" id="animal-data-nascimento" required>
+                    </div>
+                    <button type="submit">Cadastrar Animal</button>
+                </form>
+            </section>
+
+            <!-- Formulário de Cadastro de Cliente -->
+            <section id="cadastro-cliente" class="form-section">
+                <h2>Cadastro de Cliente</h2>
+                <form id="cliente-form">
+                    <div class="form-group">
+                        <label for="cliente-nome">Nome:</label>
+                        <input type="text" id="cliente-nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente-telefone">Telefone:</label>
+                        <input type="tel" id="cliente-telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente-email">Email:</label>
+                        <input type="email" id="cliente-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente-endereco">Endereço:</label>
+                        <input type="text" id="cliente-endereco" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente-cpf">CPF:</label>
+                        <input type="text" id="cliente-cpf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente-status">Status de Inadimplência:</label>
+                        <select id="cliente-status" required>
+                            <option value="false">Em dia</option>
+                            <option value="true">Inadimplente</option>
+                        </select>
+                    </div>
+                    <button type="submit">Cadastrar Cliente</button>
+                </form>
+            </section>
+
+            <!-- Formulário de Cadastro de Médico -->
+            <section id="cadastro-medico" class="form-section">
+                <h2>Cadastro de Médico</h2>
+                <form id="medico-form">
+                    <div class="form-group">
+                        <label for="medico-nome">Nome:</label>
+                        <input type="text" id="medico-nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico-telefone">Telefone:</label>
+                        <input type="tel" id="medico-telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico-email">Email:</label>
+                        <input type="email" id="medico-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico-endereco">Endereço:</label>
+                        <input type="text" id="medico-endereco" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico-cpf">CPF:</label>
+                        <input type="text" id="medico-cpf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico-registro">Registro Profissional:</label>
+                        <input type="text" id="medico-registro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico-especialidade">Especialidade:</label>
+                        <input type="text" id="medico-especialidade" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico-carga-horaria">Carga Horária Semanal:</label>
+                        <input type="number" id="medico-carga-horaria" required>
+                    </div>
+                    <button type="submit">Cadastrar Médico</button>
+                </form>
+            </section>
+
+            <!-- Formulário de Cadastro de Funcionário -->
+            <section id="cadastro-funcionario" class="form-section">
+                <h2>Cadastro de Funcionário</h2>
+                <form id="funcionario-form">
+                    <div class="form-group">
+                        <label for="funcionario-nome">Nome:</label>
+                        <input type="text" id="funcionario-nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="funcionario-telefone">Telefone:</label>
+                        <input type="tel" id="funcionario-telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="funcionario-email">Email:</label>
+                        <input type="email" id="funcionario-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="funcionario-endereco">Endereço:</label>
+                        <input type="text" id="funcionario-endereco" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="funcionario-cpf">CPF:</label>
+                        <input type="text" id="funcionario-cpf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="funcionario-carga-horaria">Carga Horária Semanal:</label>
+                        <input type="number" id="funcionario-carga-horaria" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="funcionario-sindicalizado">Sindicalizado:</label>
+                        <select id="funcionario-sindicalizado" required>
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="funcionario-funcao">Função:</label>
+                        <input type="text" id="funcionario-funcao" required>
+                    </div>
+                    <button type="submit">Cadastrar Funcionário</button>
+                </form>
+            </section>
+
+            <!-- Formulário de Agendamento -->
+            <section id="agendamento" class="form-section">
+                <h2>Agendamento de Consulta</h2>
+                <form id="agendamento-form">
+                    <div class="form-group">
+                        <label for="agendamento-data">Data:</label>
+                        <input type="datetime-local" id="agendamento-data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="agendamento-medico">Médico:</label>
+                        <select id="agendamento-medico" required>
+                            <!-- Opções serão preenchidas via JavaScript -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="agendamento-cliente">Cliente:</label>
+                        <select id="agendamento-cliente" required>
+                            <!-- Opções serão preenchidas via JavaScript -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="agendamento-funcionario">Funcionário:</label>
+                        <select id="agendamento-funcionario" required>
+                            <!-- Opções serão preenchidas via JavaScript -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="agendamento-valor">Valor (R$):</label>
+                        <input type="number" id="agendamento-valor" step="0.01" required>
+                    </div>
+                    <button type="submit">Agendar Consulta</button>
+                </form>
+            </section>
+
+            <!-- Resultado do Agendamento -->
+            <section id="resultado-agendamento" class="hidden">
+                <h2>Consulta Agendada</h2>
+                <div id="consulta-info"></div>
+                <button id="finalizar-consulta">Finalizar Consulta</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Sistema de Clínica Veterinária &copy; 2023</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Simulação de dados (em uma aplicação real, isso viria de um backend)
+    const medicos = [];
+    const clientes = [];
+    const funcionarios = [];
+    const agendamentos = [];
+
+    // Seletores de formulários
+    const animalForm = document.getElementById('animal-form');
+    const clienteForm = document.getElementById('cliente-form');
+    const medicoForm = document.getElementById('medico-form');
+    const funcionarioForm = document.getElementById('funcionario-form');
+    const agendamentoForm = document.getElementById('agendamento-form');
+    const finalizarConsultaBtn = document.getElementById('finalizar-consulta');
+    const resultadoSection = document.getElementById('resultado-agendamento');
+    const consultaInfo = document.getElementById('consulta-info');
+
+    // Cadastro de Animal
+    animalForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Animal cadastrado com sucesso!');
+        animalForm.reset();
+    });
+
+    // Cadastro de Cliente
+    clienteForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Cliente cadastrado com sucesso!');
+        clienteForm.reset();
+    });
+
+    // Cadastro de Médico
+    medicoForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Médico cadastrado com sucesso!');
+        medicoForm.reset();
+    });
+
+    // Cadastro de Funcionário
+    funcionarioForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Funcionário cadastrado com sucesso!');
+        funcionarioForm.reset();
+    });
+
+    // Agendamento de Consulta
+    agendamentoForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simular dados do agendamento
+        const data = document.getElementById('agendamento-data').value;
+        const valor = document.getElementById('agendamento-valor').value;
+        
+        // Mostrar informações do agendamento
+        consultaInfo.innerHTML = `
+            <p><strong>Data:</strong> ${formatarData(data)}</p>
+            <p><strong>Valor:</strong> R$ ${parseFloat(valor).toFixed(2)}</p>
+            <p>Agendamento realizado com sucesso!</p>
+        `;
+        
+        resultadoSection.classList.remove('hidden');
+        agendamentoForm.reset();
+    });
+
+    // Finalizar Consulta
+    finalizarConsultaBtn.addEventListener('click', function() {
+        consultaInfo.innerHTML += `<p>Consulta concluída com sucesso!</p>`;
+        finalizarConsultaBtn.disabled = true;
+    });
+
+    // Função auxiliar para formatar data
+    function formatarData(dataString) {
+        const data = new Date(dataString);
+        return data.toLocaleString('pt-BR');
+    }
+});
+    </script>
+</body>
+</html>
